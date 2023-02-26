@@ -1,7 +1,7 @@
 from config.client import Client
 db = Client().get_db("practice")
 
-documenets  = db.restaurants.find(
+documents  = db.restaurants.find(
     {
     "borough":{"$ne":"Brooklyn"},
     "cuisine":{"$ne":"American"},
@@ -9,6 +9,6 @@ documenets  = db.restaurants.find(
     }
 ).sort("cuisine",-1)
 
-for doc in documenets :
+for doc in documents :
     print(doc)
 

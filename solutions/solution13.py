@@ -8,11 +8,11 @@ options = {
     "cuisine":1
 }
 
-documenets  = db.restaurants.find(
+documents  = db.restaurants.find(
     { "name":{"$regex":"Food$" } },
     options
 )
 
-for doc in documenets :
+for doc in documents :
     print(doc)
 

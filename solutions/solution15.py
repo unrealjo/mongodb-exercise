@@ -1,7 +1,7 @@
 from config.client import Client
 db = Client().get_db("practice")
 
-documenets  = db.restaurants.find(
+documents  = db.restaurants.find(
     {
         "borough":"Bronx",
         "$or":[
@@ -11,6 +11,6 @@ documenets  = db.restaurants.find(
     }
 )
 
-for doc in documenets :
+for doc in documents :
     print(doc)
 

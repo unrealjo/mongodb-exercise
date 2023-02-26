@@ -8,7 +8,7 @@ options = {
     "cuisine":1
 }
 
-documenets  = db.restaurants.find({},options)
-for doc in documenets :
+documents  = db.restaurants.find({},options)
+for doc in documents :
     print(doc)
 

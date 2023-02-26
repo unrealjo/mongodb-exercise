@@ -1,10 +1,10 @@
 from config.client import Client
 db = Client().get_db("practice")
 
-documenets  = db.restaurants.find(
+documents  = db.restaurants.find(
     {"borough":"Brooklyn"}
 ).limit(5)
 
-for doc in documenets :
+for doc in documents :
     print(doc)
 
